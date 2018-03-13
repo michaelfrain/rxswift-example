@@ -14,6 +14,8 @@
 		EB2C769B20583E0B00BE00D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2C769920583E0B00BE00D5 /* LaunchScreen.storyboard */; };
 		EB2C76A620583E0B00BE00D5 /* rxswift_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C76A520583E0B00BE00D5 /* rxswift_exampleTests.swift */; };
 		EB2C76B120583E0B00BE00D5 /* rxswift_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C76B020583E0B00BE00D5 /* rxswift_exampleUITests.swift */; };
+		EB2C76C22058627400BE00D5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2C76C02058627300BE00D5 /* RxCocoa.framework */; };
+		EB2C76C32058627400BE00D5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2C76C12058627300BE00D5 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		EB2C76AC20583E0B00BE00D5 /* rxswift-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rxswift-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2C76B020583E0B00BE00D5 /* rxswift_exampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rxswift_exampleUITests.swift; sourceTree = "<group>"; };
 		EB2C76B220583E0B00BE00D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB2C76C02058627300BE00D5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		EB2C76C12058627300BE00D5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2C76C22058627400BE00D5 /* RxCocoa.framework in Frameworks */,
+				EB2C76C32058627400BE00D5 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 				EB2C76A420583E0B00BE00D5 /* rxswift-exampleTests */,
 				EB2C76AF20583E0B00BE00D5 /* rxswift-exampleUITests */,
 				EB2C768E20583E0B00BE00D5 /* Products */,
+				EB2C76BF2058627300BE00D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,15 @@
 			path = "rxswift-exampleUITests";
 			sourceTree = "<group>";
 		};
+		EB2C76BF2058627300BE00D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB2C76C02058627300BE00D5 /* RxCocoa.framework */,
+				EB2C76C12058627300BE00D5 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +151,7 @@
 				EB2C768920583E0B00BE00D5 /* Sources */,
 				EB2C768A20583E0B00BE00D5 /* Frameworks */,
 				EB2C768B20583E0B00BE00D5 /* Resources */,
+				EB2C76BE205861EC00BE00D5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +270,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EB2C76BE205861EC00BE00D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB2C768920583E0B00BE00D5 /* Sources */ = {
@@ -428,6 +465,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24GJL6F79Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "rxswift-example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.frainm.rxswift-example";
@@ -443,6 +484,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24GJL6F79Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "rxswift-example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.frainm.rxswift-example";
