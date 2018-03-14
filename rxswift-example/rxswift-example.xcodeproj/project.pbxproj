@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EB2C769120583E0B00BE00D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C769020583E0B00BE00D5 /* AppDelegate.swift */; };
-		EB2C769320583E0B00BE00D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C769220583E0B00BE00D5 /* ViewController.swift */; };
 		EB2C769620583E0B00BE00D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2C769420583E0B00BE00D5 /* Main.storyboard */; };
 		EB2C769820583E0B00BE00D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB2C769720583E0B00BE00D5 /* Assets.xcassets */; };
 		EB2C769B20583E0B00BE00D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2C769920583E0B00BE00D5 /* LaunchScreen.storyboard */; };
@@ -16,6 +15,10 @@
 		EB2C76B120583E0B00BE00D5 /* rxswift_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C76B020583E0B00BE00D5 /* rxswift_exampleUITests.swift */; };
 		EB2C76C22058627400BE00D5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2C76C02058627300BE00D5 /* RxCocoa.framework */; };
 		EB2C76C32058627400BE00D5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2C76C12058627300BE00D5 /* RxSwift.framework */; };
+		EB2C76C62058664300BE00D5 /* Clue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C76C52058664300BE00D5 /* Clue.swift */; };
+		EB2C76C92058741600BE00D5 /* ClueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C76C82058741600BE00D5 /* ClueCellViewModel.swift */; };
+		EB2C76CC20587EBC00BE00D5 /* ClueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C76CB20587EBC00BE00D5 /* ClueCollectionViewCell.swift */; };
+		EB2C76D020588B1500BE00D5 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C76CF20588B1500BE00D5 /* Round.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 /* Begin PBXFileReference section */
 		EB2C768D20583E0B00BE00D5 /* rxswift-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rxswift-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2C769020583E0B00BE00D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB2C769220583E0B00BE00D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB2C769520583E0B00BE00D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB2C769720583E0B00BE00D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB2C769A20583E0B00BE00D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		EB2C76B220583E0B00BE00D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB2C76C02058627300BE00D5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		EB2C76C12058627300BE00D5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		EB2C76C52058664300BE00D5 /* Clue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clue.swift; sourceTree = "<group>"; };
+		EB2C76C82058741600BE00D5 /* ClueCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueCellViewModel.swift; sourceTree = "<group>"; };
+		EB2C76CB20587EBC00BE00D5 /* ClueCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB2C76CF20588B1500BE00D5 /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +110,10 @@
 		EB2C768F20583E0B00BE00D5 /* rxswift-example */ = {
 			isa = PBXGroup;
 			children = (
+				EB2C76CA20587EA200BE00D5 /* Views */,
+				EB2C76C7205873FF00BE00D5 /* View Models */,
+				EB2C76C42058662200BE00D5 /* Models */,
 				EB2C769020583E0B00BE00D5 /* AppDelegate.swift */,
-				EB2C769220583E0B00BE00D5 /* ViewController.swift */,
 				EB2C769420583E0B00BE00D5 /* Main.storyboard */,
 				EB2C769720583E0B00BE00D5 /* Assets.xcassets */,
 				EB2C769920583E0B00BE00D5 /* LaunchScreen.storyboard */,
@@ -139,6 +147,31 @@
 				EB2C76C12058627300BE00D5 /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB2C76C42058662200BE00D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB2C76C52058664300BE00D5 /* Clue.swift */,
+				EB2C76CF20588B1500BE00D5 /* Round.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB2C76C7205873FF00BE00D5 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB2C76C82058741600BE00D5 /* ClueCellViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		EB2C76CA20587EA200BE00D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB2C76CB20587EBC00BE00D5 /* ClueCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,8 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB2C769320583E0B00BE00D5 /* ViewController.swift in Sources */,
+				EB2C76C62058664300BE00D5 /* Clue.swift in Sources */,
 				EB2C769120583E0B00BE00D5 /* AppDelegate.swift in Sources */,
+				EB2C76C92058741600BE00D5 /* ClueCellViewModel.swift in Sources */,
+				EB2C76D020588B1500BE00D5 /* Round.swift in Sources */,
+				EB2C76CC20587EBC00BE00D5 /* ClueCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
